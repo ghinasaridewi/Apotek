@@ -8,8 +8,7 @@
     End Sub
 
     Private Sub Resep_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'ApotekDataSet.resep' table. You can move, or remove it, as needed.
-        Me.ResepTableAdapter.Fill(Me.ApotekDataSet.resep)
+        'TODO: This line of code loads data into the 'ApotekDataSet.resep' table. You can move, or remove it, as needed.Me.ResepTableAdapter.Fill(Me.ApotekDataSet.resep)
 
     End Sub
 End Class

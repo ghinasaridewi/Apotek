@@ -8,8 +8,7 @@
     End Sub
 
     Private Sub Transaksi_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'ApotekDataSet.transaksi' table. You can move, or remove it, as needed.
-        Me.TransaksiTableAdapter.Fill(Me.ApotekDataSet.transaksi)
+        'TODO: This line of code loads data into the 'ApotekDataSet.transaksi' table. You can move, or remove it, as needed.Me.TransaksiTableAdapter.Fill(Me.ApotekDataSet.transaksi)
 
     End Sub
 End Class

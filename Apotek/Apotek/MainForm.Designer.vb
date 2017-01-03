@@ -25,9 +25,9 @@ Partial Class MainForm
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MasterDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasienToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResepToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ObatToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ObatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ApotekToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TentangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -44,7 +44,7 @@ Partial Class MainForm
         '
         'MasterDataToolStripMenuItem
         '
-        Me.MasterDataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PasienToolStripMenuItem, Me.ObatToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.ObatToolStripMenuItem1})
+        Me.MasterDataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PasienToolStripMenuItem, Me.ResepToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.ObatToolStripMenuItem})
         Me.MasterDataToolStripMenuItem.Name = "MasterDataToolStripMenuItem"
         Me.MasterDataToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.MasterDataToolStripMenuItem.Text = "Master Data"
@@ -55,11 +55,11 @@ Partial Class MainForm
         Me.PasienToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PasienToolStripMenuItem.Text = "Pasien"
         '
-        'ObatToolStripMenuItem
+        'ResepToolStripMenuItem
         '
-        Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ObatToolStripMenuItem.Text = "Resep"
+        Me.ResepToolStripMenuItem.Name = "ResepToolStripMenuItem"
+        Me.ResepToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ResepToolStripMenuItem.Text = "Resep"
         '
         'TransaksiToolStripMenuItem
         '
@@ -67,11 +67,11 @@ Partial Class MainForm
         Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi"
         '
-        'ObatToolStripMenuItem1
+        'ObatToolStripMenuItem
         '
-        Me.ObatToolStripMenuItem1.Name = "ObatToolStripMenuItem1"
-        Me.ObatToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.ObatToolStripMenuItem1.Text = "Obat"
+        Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
+        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ObatToolStripMenuItem.Text = "Obat"
         '
         'ApotekToolStripMenuItem
         '
@@ -103,9 +103,9 @@ Partial Class MainForm
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents MasterDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PasienToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ResepToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ObatToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ObatToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ApotekToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TentangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
