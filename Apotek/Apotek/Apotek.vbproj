@@ -110,6 +110,12 @@
     <Compile Include="Pasien.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Resep.Designer.vb">
+      <DependentUpon>Resep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resep.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mAINfORM.resx">
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pasien.resx">
       <DependentUpon>Pasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resep.resx">
+      <DependentUpon>Resep.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
