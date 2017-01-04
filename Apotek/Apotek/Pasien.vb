@@ -14,6 +14,12 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        ID_PASIENTextBox.Enabled = True
+        NAMA_PASIENTextBox.Enabled = True
+        TELP_PASIENTextBox.Enabled = True
+        ALAMAT_PASIENTextBox.Enabled = True
+        RESEP_ID_RESEPTextBox.Enabled = True
+
         PasienBindingSource.AddNew()
     End Sub
 
@@ -21,5 +27,14 @@
         Me.Validate()
         Me.PasienBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ApotekDataSet)
+
+        MessageBox.Show("SUSKES TAMBAH DATA")
+
+        ID_PASIENTextBox.Enabled = False
+        NAMA_PASIENTextBox.Enabled = False
+        TELP_PASIENTextBox.Enabled = False
+        ALAMAT_PASIENTextBox.Enabled = False
+        RESEP_ID_RESEPTextBox.Enabled = False
+
     End Sub
 End Class

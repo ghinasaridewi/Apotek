@@ -368,6 +368,7 @@ Partial Class Pasien
         'ID_PASIENTextBox
         '
         Me.ID_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "ID_PASIEN", True))
+        Me.ID_PASIENTextBox.Enabled = False
         Me.ID_PASIENTextBox.Location = New System.Drawing.Point(111, 24)
         Me.ID_PASIENTextBox.Name = "ID_PASIENTextBox"
         Me.ID_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
@@ -376,6 +377,7 @@ Partial Class Pasien
         'NAMA_PASIENTextBox
         '
         Me.NAMA_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "NAMA_PASIEN", True))
+        Me.NAMA_PASIENTextBox.Enabled = False
         Me.NAMA_PASIENTextBox.Location = New System.Drawing.Point(111, 50)
         Me.NAMA_PASIENTextBox.Name = "NAMA_PASIENTextBox"
         Me.NAMA_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
@@ -384,6 +386,7 @@ Partial Class Pasien
         'TELP_PASIENTextBox
         '
         Me.TELP_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "TELP_PASIEN", True))
+        Me.TELP_PASIENTextBox.Enabled = False
         Me.TELP_PASIENTextBox.Location = New System.Drawing.Point(111, 76)
         Me.TELP_PASIENTextBox.Name = "TELP_PASIENTextBox"
         Me.TELP_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
@@ -392,6 +395,7 @@ Partial Class Pasien
         'ALAMAT_PASIENTextBox
         '
         Me.ALAMAT_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "ALAMAT_PASIEN", True))
+        Me.ALAMAT_PASIENTextBox.Enabled = False
         Me.ALAMAT_PASIENTextBox.Location = New System.Drawing.Point(111, 102)
         Me.ALAMAT_PASIENTextBox.Name = "ALAMAT_PASIENTextBox"
         Me.ALAMAT_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
@@ -400,6 +404,7 @@ Partial Class Pasien
         'RESEP_ID_RESEPTextBox
         '
         Me.RESEP_ID_RESEPTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "RESEP_ID_RESEP", True))
+        Me.RESEP_ID_RESEPTextBox.Enabled = False
         Me.RESEP_ID_RESEPTextBox.Location = New System.Drawing.Point(111, 128)
         Me.RESEP_ID_RESEPTextBox.Name = "RESEP_ID_RESEPTextBox"
         Me.RESEP_ID_RESEPTextBox.Size = New System.Drawing.Size(100, 20)
