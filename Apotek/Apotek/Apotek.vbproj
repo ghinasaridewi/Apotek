@@ -118,7 +118,9 @@
     <Compile Include="Pasien.Designer.vb">
       <DependentUpon>Pasien.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pasien.vb" />
+    <Compile Include="Pasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Resep.Designer.vb">
       <DependentUpon>Resep.vb</DependentUpon>
     </Compile>
@@ -128,7 +130,9 @@
     <Compile Include="Transaksi.Designer.vb">
       <DependentUpon>Transaksi.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transaksi.vb" />
+    <Compile Include="Transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="mAINfORM.resx">

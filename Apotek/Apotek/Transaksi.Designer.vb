@@ -51,15 +51,19 @@ Partial Class Transaksi
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RefreshButton = New System.Windows.Forms.Button()
+        Me.BatalButton = New System.Windows.Forms.Button()
+        Me.KeluarButton = New System.Windows.Forms.Button()
+        Me.SimpanButton = New System.Windows.Forms.Button()
+        Me.HapusButton = New System.Windows.Forms.Button()
+        Me.EditButton = New System.Windows.Forms.Button()
+        Me.TambahButton = New System.Windows.Forms.Button()
         Me.ID_TRANSAKSITextBox = New System.Windows.Forms.TextBox()
         Me.TGL_TRANSAKSIDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.BIAYA_TRANSAKSITextBox = New System.Windows.Forms.TextBox()
         Me.OBAT_ID_OBATTextBox = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.cariButton = New System.Windows.Forms.Button()
         ID_TRANSAKSILabel = New System.Windows.Forms.Label()
         TGL_TRANSAKSILabel = New System.Windows.Forms.Label()
         BIAYA_TRANSAKSILabel = New System.Windows.Forms.Label()
@@ -248,9 +252,9 @@ Partial Class Transaksi
         Me.TransaksiDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TransaksiDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.TransaksiDataGridView.DataSource = Me.TransaksiBindingSource
-        Me.TransaksiDataGridView.Location = New System.Drawing.Point(369, 28)
+        Me.TransaksiDataGridView.Location = New System.Drawing.Point(369, 59)
         Me.TransaksiDataGridView.Name = "TransaksiDataGridView"
-        Me.TransaksiDataGridView.Size = New System.Drawing.Size(448, 220)
+        Me.TransaksiDataGridView.Size = New System.Drawing.Size(448, 189)
         Me.TransaksiDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -279,11 +283,13 @@ Partial Class Transaksi
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button5)
-        Me.GroupBox1.Controls.Add(Me.Button4)
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.RefreshButton)
+        Me.GroupBox1.Controls.Add(Me.BatalButton)
+        Me.GroupBox1.Controls.Add(Me.KeluarButton)
+        Me.GroupBox1.Controls.Add(Me.SimpanButton)
+        Me.GroupBox1.Controls.Add(Me.HapusButton)
+        Me.GroupBox1.Controls.Add(Me.EditButton)
+        Me.GroupBox1.Controls.Add(Me.TambahButton)
         Me.GroupBox1.Controls.Add(ID_TRANSAKSILabel)
         Me.GroupBox1.Controls.Add(Me.ID_TRANSAKSITextBox)
         Me.GroupBox1.Controls.Add(TGL_TRANSAKSILabel)
@@ -299,50 +305,69 @@ Partial Class Transaksi
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Transaksi"
         '
-        'Button5
+        'RefreshButton
         '
-        Me.Button5.Location = New System.Drawing.Point(26, 208)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(93, 24)
-        Me.Button5.TabIndex = 12
-        Me.Button5.Text = "Keluar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.RefreshButton.Location = New System.Drawing.Point(253, 148)
+        Me.RefreshButton.Name = "RefreshButton"
+        Me.RefreshButton.Size = New System.Drawing.Size(89, 23)
+        Me.RefreshButton.TabIndex = 16
+        Me.RefreshButton.Text = "Refresh"
+        Me.RefreshButton.UseVisualStyleBackColor = True
         '
-        'Button4
+        'BatalButton
         '
-        Me.Button4.Location = New System.Drawing.Point(141, 177)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(93, 24)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "Simpan"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BatalButton.Enabled = False
+        Me.BatalButton.Location = New System.Drawing.Point(253, 177)
+        Me.BatalButton.Name = "BatalButton"
+        Me.BatalButton.Size = New System.Drawing.Size(89, 22)
+        Me.BatalButton.TabIndex = 15
+        Me.BatalButton.Text = "Batal"
+        Me.BatalButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'KeluarButton
         '
-        Me.Button3.Location = New System.Drawing.Point(26, 178)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(93, 24)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Hapus"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.KeluarButton.Location = New System.Drawing.Point(125, 207)
+        Me.KeluarButton.Name = "KeluarButton"
+        Me.KeluarButton.Size = New System.Drawing.Size(114, 24)
+        Me.KeluarButton.TabIndex = 12
+        Me.KeluarButton.Text = "Keluar"
+        Me.KeluarButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'SimpanButton
         '
-        Me.Button2.Location = New System.Drawing.Point(141, 147)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(93, 24)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Edit"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.SimpanButton.Location = New System.Drawing.Point(141, 177)
+        Me.SimpanButton.Name = "SimpanButton"
+        Me.SimpanButton.Size = New System.Drawing.Size(89, 24)
+        Me.SimpanButton.TabIndex = 11
+        Me.SimpanButton.Text = "Simpan"
+        Me.SimpanButton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'HapusButton
         '
-        Me.Button1.Location = New System.Drawing.Point(26, 148)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 24)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Tambah"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.HapusButton.Location = New System.Drawing.Point(26, 178)
+        Me.HapusButton.Name = "HapusButton"
+        Me.HapusButton.Size = New System.Drawing.Size(93, 24)
+        Me.HapusButton.TabIndex = 10
+        Me.HapusButton.Text = "Hapus"
+        Me.HapusButton.UseVisualStyleBackColor = True
+        '
+        'EditButton
+        '
+        Me.EditButton.Location = New System.Drawing.Point(141, 147)
+        Me.EditButton.Name = "EditButton"
+        Me.EditButton.Size = New System.Drawing.Size(89, 24)
+        Me.EditButton.TabIndex = 9
+        Me.EditButton.Text = "Edit"
+        Me.EditButton.UseVisualStyleBackColor = True
+        '
+        'TambahButton
+        '
+        Me.TambahButton.Location = New System.Drawing.Point(26, 148)
+        Me.TambahButton.Name = "TambahButton"
+        Me.TambahButton.Size = New System.Drawing.Size(93, 24)
+        Me.TambahButton.TabIndex = 8
+        Me.TambahButton.Text = "Tambah"
+        Me.TambahButton.UseVisualStyleBackColor = True
         '
         'ID_TRANSAKSITextBox
         '
@@ -376,11 +401,29 @@ Partial Class Transaksi
         Me.OBAT_ID_OBATTextBox.Size = New System.Drawing.Size(200, 20)
         Me.OBAT_ID_OBATTextBox.TabIndex = 7
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(379, 28)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(357, 20)
+        Me.TextBox1.TabIndex = 3
+        '
+        'cariButton
+        '
+        Me.cariButton.Location = New System.Drawing.Point(742, 26)
+        Me.cariButton.Name = "cariButton"
+        Me.cariButton.Size = New System.Drawing.Size(75, 23)
+        Me.cariButton.TabIndex = 5
+        Me.cariButton.Text = "Cari"
+        Me.cariButton.UseVisualStyleBackColor = True
+        '
         'Transaksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(834, 335)
+        Me.Controls.Add(Me.cariButton)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TransaksiDataGridView)
         Me.Controls.Add(Me.TransaksiBindingNavigator)
@@ -421,13 +464,17 @@ Partial Class Transaksi
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents KeluarButton As System.Windows.Forms.Button
+    Friend WithEvents SimpanButton As System.Windows.Forms.Button
+    Friend WithEvents HapusButton As System.Windows.Forms.Button
+    Friend WithEvents EditButton As System.Windows.Forms.Button
+    Friend WithEvents TambahButton As System.Windows.Forms.Button
     Friend WithEvents ID_TRANSAKSITextBox As System.Windows.Forms.TextBox
     Friend WithEvents TGL_TRANSAKSIDateTimePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents BIAYA_TRANSAKSITextBox As System.Windows.Forms.TextBox
     Friend WithEvents OBAT_ID_OBATTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents RefreshButton As System.Windows.Forms.Button
+    Friend WithEvents BatalButton As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents cariButton As System.Windows.Forms.Button
 End Class
