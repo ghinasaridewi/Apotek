@@ -23,28 +23,28 @@ Partial Class Pasien
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pasien))
         Dim ID_PASIENLabel As System.Windows.Forms.Label
         Dim NAMA_PASIENLabel As System.Windows.Forms.Label
         Dim TELP_PASIENLabel As System.Windows.Forms.Label
         Dim ALAMAT_PASIENLabel As System.Windows.Forms.Label
         Dim RESEP_ID_RESEPLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pasien))
         Me.ApotekDataSet = New Apotek.apotekDataSet()
         Me.PasienBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PasienTableAdapter = New Apotek.apotekDataSetTableAdapters.pasienTableAdapter()
         Me.TableAdapterManager = New Apotek.apotekDataSetTableAdapters.TableAdapterManager()
         Me.PasienBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.PasienBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.PasienDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,6 +75,51 @@ Partial Class Pasien
         CType(Me.PasienDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ID_PASIENLabel
+        '
+        ID_PASIENLabel.AutoSize = True
+        ID_PASIENLabel.Location = New System.Drawing.Point(6, 27)
+        ID_PASIENLabel.Name = "ID_PASIENLabel"
+        ID_PASIENLabel.Size = New System.Drawing.Size(63, 13)
+        ID_PASIENLabel.TabIndex = 0
+        ID_PASIENLabel.Text = "ID PASIEN:"
+        '
+        'NAMA_PASIENLabel
+        '
+        NAMA_PASIENLabel.AutoSize = True
+        NAMA_PASIENLabel.Location = New System.Drawing.Point(6, 53)
+        NAMA_PASIENLabel.Name = "NAMA_PASIENLabel"
+        NAMA_PASIENLabel.Size = New System.Drawing.Size(83, 13)
+        NAMA_PASIENLabel.TabIndex = 2
+        NAMA_PASIENLabel.Text = "NAMA PASIEN:"
+        '
+        'TELP_PASIENLabel
+        '
+        TELP_PASIENLabel.AutoSize = True
+        TELP_PASIENLabel.Location = New System.Drawing.Point(6, 79)
+        TELP_PASIENLabel.Name = "TELP_PASIENLabel"
+        TELP_PASIENLabel.Size = New System.Drawing.Size(79, 13)
+        TELP_PASIENLabel.TabIndex = 4
+        TELP_PASIENLabel.Text = "TELP PASIEN:"
+        '
+        'ALAMAT_PASIENLabel
+        '
+        ALAMAT_PASIENLabel.AutoSize = True
+        ALAMAT_PASIENLabel.Location = New System.Drawing.Point(6, 105)
+        ALAMAT_PASIENLabel.Name = "ALAMAT_PASIENLabel"
+        ALAMAT_PASIENLabel.Size = New System.Drawing.Size(95, 13)
+        ALAMAT_PASIENLabel.TabIndex = 6
+        ALAMAT_PASIENLabel.Text = "ALAMAT PASIEN:"
+        '
+        'RESEP_ID_RESEPLabel
+        '
+        RESEP_ID_RESEPLabel.AutoSize = True
+        RESEP_ID_RESEPLabel.Location = New System.Drawing.Point(6, 131)
+        RESEP_ID_RESEPLabel.Name = "RESEP_ID_RESEPLabel"
+        RESEP_ID_RESEPLabel.Size = New System.Drawing.Size(99, 13)
+        RESEP_ID_RESEPLabel.TabIndex = 8
+        RESEP_ID_RESEPLabel.Text = "RESEP ID RESEP:"
         '
         'ApotekDataSet
         '
@@ -117,6 +162,31 @@ Partial Class Pasien
         Me.PasienBindingNavigator.TabIndex = 0
         Me.PasienBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -149,17 +219,10 @@ Partial Class Pasien
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -167,7 +230,7 @@ Partial Class Pasien
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -176,38 +239,20 @@ Partial Class Pasien
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'PasienBindingNavigatorSaveItem
         '
         Me.PasienBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.PasienBindingNavigatorSaveItem.Image = CType(resources.GetObject("PasienBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.PasienBindingNavigatorSaveItem.Name = "PasienBindingNavigatorSaveItem"
-        Me.PasienBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.PasienBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.PasienBindingNavigatorSaveItem.Text = "Save Data"
         '
         'PasienDataGridView
@@ -320,15 +365,6 @@ Partial Class Pasien
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Pasien"
         '
-        'ID_PASIENLabel
-        '
-        ID_PASIENLabel.AutoSize = True
-        ID_PASIENLabel.Location = New System.Drawing.Point(6, 27)
-        ID_PASIENLabel.Name = "ID_PASIENLabel"
-        ID_PASIENLabel.Size = New System.Drawing.Size(63, 13)
-        ID_PASIENLabel.TabIndex = 0
-        ID_PASIENLabel.Text = "ID PASIEN:"
-        '
         'ID_PASIENTextBox
         '
         Me.ID_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "ID_PASIEN", True))
@@ -336,15 +372,6 @@ Partial Class Pasien
         Me.ID_PASIENTextBox.Name = "ID_PASIENTextBox"
         Me.ID_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ID_PASIENTextBox.TabIndex = 1
-        '
-        'NAMA_PASIENLabel
-        '
-        NAMA_PASIENLabel.AutoSize = True
-        NAMA_PASIENLabel.Location = New System.Drawing.Point(6, 53)
-        NAMA_PASIENLabel.Name = "NAMA_PASIENLabel"
-        NAMA_PASIENLabel.Size = New System.Drawing.Size(83, 13)
-        NAMA_PASIENLabel.TabIndex = 2
-        NAMA_PASIENLabel.Text = "NAMA PASIEN:"
         '
         'NAMA_PASIENTextBox
         '
@@ -354,15 +381,6 @@ Partial Class Pasien
         Me.NAMA_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NAMA_PASIENTextBox.TabIndex = 3
         '
-        'TELP_PASIENLabel
-        '
-        TELP_PASIENLabel.AutoSize = True
-        TELP_PASIENLabel.Location = New System.Drawing.Point(6, 79)
-        TELP_PASIENLabel.Name = "TELP_PASIENLabel"
-        TELP_PASIENLabel.Size = New System.Drawing.Size(79, 13)
-        TELP_PASIENLabel.TabIndex = 4
-        TELP_PASIENLabel.Text = "TELP PASIEN:"
-        '
         'TELP_PASIENTextBox
         '
         Me.TELP_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "TELP_PASIEN", True))
@@ -371,15 +389,6 @@ Partial Class Pasien
         Me.TELP_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TELP_PASIENTextBox.TabIndex = 5
         '
-        'ALAMAT_PASIENLabel
-        '
-        ALAMAT_PASIENLabel.AutoSize = True
-        ALAMAT_PASIENLabel.Location = New System.Drawing.Point(6, 105)
-        ALAMAT_PASIENLabel.Name = "ALAMAT_PASIENLabel"
-        ALAMAT_PASIENLabel.Size = New System.Drawing.Size(95, 13)
-        ALAMAT_PASIENLabel.TabIndex = 6
-        ALAMAT_PASIENLabel.Text = "ALAMAT PASIEN:"
-        '
         'ALAMAT_PASIENTextBox
         '
         Me.ALAMAT_PASIENTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PasienBindingSource, "ALAMAT_PASIEN", True))
@@ -387,15 +396,6 @@ Partial Class Pasien
         Me.ALAMAT_PASIENTextBox.Name = "ALAMAT_PASIENTextBox"
         Me.ALAMAT_PASIENTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ALAMAT_PASIENTextBox.TabIndex = 7
-        '
-        'RESEP_ID_RESEPLabel
-        '
-        RESEP_ID_RESEPLabel.AutoSize = True
-        RESEP_ID_RESEPLabel.Location = New System.Drawing.Point(6, 131)
-        RESEP_ID_RESEPLabel.Name = "RESEP_ID_RESEPLabel"
-        RESEP_ID_RESEPLabel.Size = New System.Drawing.Size(99, 13)
-        RESEP_ID_RESEPLabel.TabIndex = 8
-        RESEP_ID_RESEPLabel.Text = "RESEP ID RESEP:"
         '
         'RESEP_ID_RESEPTextBox
         '
